@@ -164,4 +164,20 @@ function mergeArray(array1, array2){
      }
    }
 
- 
+ function findPair(number, array){
+
+   var sumArray = []
+   for (var i = 0; i < array.length; i++) {
+       var difference = number - array[i];
+       if (array.includes(difference)) {
+       // sumArray.push(i)
+       sumArray.push([i, array.indexOf(difference)]);
+    }
+       //delete array[i]
+
+    }
+    return sumArray
+
+   }
+
+   console.log(findPair(50, [27, 10, 12, 23, 55, 30, 23, 40]))
